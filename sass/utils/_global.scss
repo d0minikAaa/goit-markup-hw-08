@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $primaryFont;
+  color: $primaryColor;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.border {
+  border-bottom: 1px solid $primaryBorderColor;
+}
+
+.job-section__title,
+.workers-section__title,
+.our-clients {
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 1.75rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .job-section__title,
+  .workers-section__title,
+  .our-clients {
+    padding-bottom: 50px;
+    font-size: 2.25rem;
+  }
+
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

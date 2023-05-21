@@ -1,0 +1,48 @@
+.clients-section {
+  @extend .section;
+}
+
+.clients-icons-border {
+  min-width: 210px;
+}
+
+.clients-icons-border {
+  fill: $primaryIconsColor;
+  border: 1px solid $primaryIconsColor;
+  border-radius: 3px;
+  height: 92px;
+  transition: $primaryTransition;
+  transition-duration: $transitionDuration;
+}
+
+.clients-icons-border:hover,
+.clients-icons-border:focus,
+.clients-icons-border:active {
+  fill: $secondaryColor;
+  border: 1px solid $secondaryColor;
+  cursor: pointer;
+}
+
+.clients-icons {
+  @extend .list;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-section {
+    @extend .section;
+  }
+
+  .clients-icons {
+    @extend .list;
+  }
+
+  .clients-icons-border {
+    fill: $primaryIconsColor;
+    border: 1px solid $primaryIconsColor;
+    border-radius: 3px;
+    min-width: 170px;
+    transition: $primaryTransition;
+    transition-duration: $transitionDuration;
+  }
+}

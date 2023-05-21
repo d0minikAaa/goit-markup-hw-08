@@ -1,0 +1,62 @@
+.projects {
+  @extend .list;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin-bottom: 79px;
+
+  &__description {
+    border-left: 1px solid $primaryBorderColor;
+    border-bottom: 1px solid $primaryBorderColor;
+    border-right: 1px solid $primaryBorderColor;
+    padding: 20px;
+    background-color: $primaryWhite;
+  }
+
+  &__name {
+    font-size: 1.12rem;
+    font-weight: 700;
+    line-height: 2;
+  }
+
+  &__item {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $primaryShadowColor;
+    line-height: 1.87;
+  }
+
+  &__image {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    transform: translatey(0);
+  }
+
+  &__details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.12rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    font-family: $primaryFont;
+    background-color: $secondaryColor;
+    color: $primaryWhite;
+    padding: 49px 47px 49px 24px;
+    transform: translatey(100%);
+    transition: transform 250ms ease;
+  }
+}
+
+.portfolio-img-shadow:hover .projects__details {
+  transform: translatey(0);
+}
+
+.portfolio-img-shadow:hover {
+  box-shadow: 0px 4px 4px 0px $primaryShadowColor;
+}

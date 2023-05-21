@@ -1,0 +1,70 @@
+.workers-section {
+  @extend .section;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #f5f4fa;
+}
+
+.workers-descriptions {
+  border-left: 1px solid $primaryBorderColor;
+  border-bottom: 1px solid $primaryBorderColor;
+  border-right: 1px solid $primaryBorderColor;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  background-color: $primaryWhite;
+  text-align: center;
+  line-height: 1.17;
+
+  &__name {
+    font-size: 1rem;
+    font-weight: $primaryFontWeight;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  &__profession {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $primaryShadowColor;
+    padding-bottom: 16px;
+  }
+}
+
+.workers-list {
+  @extend .list;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &__image {
+    display: block;
+    position: relative;
+  }
+}
+
+.workers-list-shadow,
+.workers-list-shadow:hover,
+.workers-list-shadow:focus,
+.workers-list-shadow:active {
+  box-shadow: 0px 1px 3px 0px #0000001f;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .workers-list-shadow {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .workers-section {
+    @extend .section;
+  }
+
+  .workers-section__title {
+    padding-bottom: 30px;
+  }
+
+  .workers-list-shadow {
+    max-width: 270px;
+  }
+}

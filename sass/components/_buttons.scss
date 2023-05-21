@@ -1,0 +1,36 @@
+.button {
+  font-family: $primaryFont;
+  font-size: 1rem;
+  font-weight: $primaryFontWeight;
+  border-radius: 4px;
+  border: none;
+  transition: $primaryTransition;
+  transition-duration: $transitionDuration;
+
+  &__main {
+    line-height: 1.87;
+    display: flex;
+    justify-content: center;
+    padding: 10px 41px 10px 41px;
+    margin: auto;
+  }
+
+  &__portfolio {
+    line-height: 1.62;
+    padding: 6px 22px 6px 22px;
+    margin: 94px 4px 35px 4px;
+  }
+}
+.button:hover,
+.button:focus {
+  color: $primaryWhite;
+  background-color: $secondaryColor;
+  cursor: pointer;
+}
+
+.portfolio-button-list {
+  display: flex;
+  justify-content: center;
+}
+
+

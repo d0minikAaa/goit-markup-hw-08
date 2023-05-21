@@ -1,0 +1,48 @@
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media-icons-border {
+  fill: $primaryIconsColor;
+  width: 44px;
+  height: 44px;
+  background-color: $primaryWhite;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  transition: $primaryTransition;
+  transition-duration: $transitionDuration;
+}
+
+.footer-social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  &__style {
+    fill: $primaryWhite;
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff1a;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    transition: $primaryTransition;
+    transition-duration: $transitionDuration;
+  }
+}
+.social-media-icons-border:hover,
+.social-media-icons-border:focus,
+.social-media-icons-border:active,
+.footer-social-media-icons__style:hover,
+.footer-social-media-icons__style:focus,
+.footer-social-media-icons__style:active {
+  fill: $primaryWhite;
+  width: 44px;
+  height: 44px;
+  background-color: $secondaryColor;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+}

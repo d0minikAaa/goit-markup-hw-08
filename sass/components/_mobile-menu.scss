@@ -1,0 +1,115 @@
+.menu .link {
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu .link:hover,
+.menu .link:focus {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $headingColor;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: $headingColor;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: $primaryWhite;
+  z-index: 999;
+  padding: 48px 40px;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+  display: block;
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: $headingColor;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding-bottom: 32px;
+  text-decoration: none;
+}
+
+.link {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: $headingColor;
+
+  &-nav {
+    @extend .link;
+    padding-bottom: 32px;
+  }
+
+  &-contact {
+    @extend .link;
+    font-size: 2.125rem;
+    color: $primaryShadowColor;
+  }
+
+  &-contact:active,
+  &-contact:hover,
+  &-nav:active,
+  &-nav:hover {
+    color: $secondaryColor;
+  }
+  &-media {
+    @extend .link;
+    font-size: 1.125rem;
+    color: $secondaryColor;
+  }
+}
+
+.link-contact--font {
+  @extend .link;
+  font-size: 1.5rem;
+  color: $primaryShadowColor;
+}
+
+.mobile-menu--nav {
+  @extend .mobile-menu;
+  padding-bottom: 306px;
+}
+
+.mobile-menu--media {
+  display: flex;
+  gap: 20px;
+  padding-top: 32px;
+}

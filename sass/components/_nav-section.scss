@@ -1,0 +1,147 @@
+nav {
+  display: none;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    font-weight: $primaryFontWeight;
+    font-size: 0.87rem;
+    line-height: 1.17;
+    color: $primaryColor;
+    padding-right: 46px;
+    transition: $primaryTransition;
+    transition-duration: $transitionDuration;
+    position: relative;
+  }
+}
+
+.nav-list__item--active {
+  font-weight: $primaryFontWeight;
+  font-size: 0.87rem;
+  line-height: 1.17;
+  color: $primaryColor;
+  padding-right: 46px;
+
+  &::after {
+    content: "";
+    width: 53px;
+    height: 4px;
+    display: block;
+    background-color: $secondaryColor;
+    border-radius: 2px;
+    position: absolute;
+    top: 87px;
+  }
+}
+
+.nav-contact__icons-email {
+  padding-bottom: 10px;
+}
+
+.nav-contact__icons:hover,
+.nav-contact__icons:focus,
+.nav-contact__icons:active {
+  gap: 10px;
+  fill: $secondaryColor;
+  cursor: pointer;
+}
+
+.nav-list__item:hover,
+.footer-address-links:hover {
+  color: $secondaryColor;
+}
+
+.nav-contact {
+  @extend .list;
+
+  &__links {
+    font-weight: $primaryFontWeight;
+    font-size: 0.75rem;
+    color: $primaryShadowColor;
+    line-height: 1.17;
+    transition: $primaryTransition;
+    transition-duration: $transitionDuration;
+  }
+
+  &__links:hover,
+  &__links:focus {
+    color: $secondaryColor;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  nav {
+    display: flex;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+  }
+  .nav-contact {
+    display: block;
+  }
+
+  .nav-list__item--active,
+  .nav-list__item {
+    padding-right: 0;
+  }
+
+  .nav-list {
+    gap: 60px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav {
+    display: flex;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .nav-list {
+    padding: 32px 353px 32px 93px;
+  }
+
+  .nav-list__item--active {
+    &::after {
+      top: 78px;
+    }
+  }
+
+  .nav-contact__icons-email {
+    padding-bottom: 0;
+  }
+
+  .email-icon,
+  .phone-icon {
+    margin-right: 10px;
+  }
+}

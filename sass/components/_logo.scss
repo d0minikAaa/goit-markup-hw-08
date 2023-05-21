@@ -1,0 +1,22 @@
+.logo {
+  font-family: $logoFont;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $headingColor;
+  text-decoration: none;
+  line-height: 1.17;
+  
+
+  &--footer {
+    @extend .logo;
+    color: $primaryWhite;
+  }
+
+  &--color {
+    color: $secondaryColor;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 1.62rem;
+  }
+}

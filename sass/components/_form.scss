@@ -1,0 +1,136 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  justify-content: center;
+  color: $primaryShadowColor;
+}
+
+.comment-section {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  border: 1px solid #21212133;
+  border-radius: 3px;
+  margin-top: 4px;
+  color: #75757580;
+  padding-top: 12px;
+  padding-left: 16px;
+  outline: none;
+}
+
+::placeholder {
+  color: #75757580;
+}
+
+.comment-section:hover,
+.comment-section:active {
+  border: 1px solid $secondaryColor;
+  transition: $primaryTransition;
+  transition-duration: $transitionDuration;
+}
+
+.form-description {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #21212133;
+  border-radius: 3px;
+  margin-top: 4px;
+  padding-left: 42px;
+  outline: none;
+}
+
+.form-description:hover,
+.form-description:active,
+.form-description:focus {
+  border: 1px solid $secondaryColor;
+  transition: $primaryTransition;
+  transition-duration: $transitionDuration;
+}
+
+.form-active {
+  fill: $headingColor;
+}
+
+.form-active:focus,
+.form-active:active,
+.form-active:hover {
+  fill: $secondaryColor;
+  transition: $primaryTransition;
+  transition-duration: $transitionDuration;
+}
+
+.form-label {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.form-title {
+  font-style: $primaryFont;
+  font-weight: 700;
+  font-size: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.form-icon {
+  top: 30px;
+  left: 12px;
+  position: absolute;
+}
+
+.checkbox {
+  width: 16px;
+  height: 15px;
+  border: 2px solid $headingColor;
+  border-radius: 2px;
+  margin: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  appearance: none;
+}
+
+.icon-icon-yes {
+  background-color: $secondaryColor;
+  fill: $primaryWhite;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .icon-icon-yes {
+  opacity: 1;
+}
+
+.accept {
+  font-size: 12px;
+  font-weight: 400px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.form-button-sent {
+  width: 200px;
+  height: 50px;
+  padding: 10px 76px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 2px 1px 0px #00000030;
+  border-radius: 4px;
+  color: $primaryWhite;
+  background-color: $secondaryColor;
+  font-family: $primaryFont;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
